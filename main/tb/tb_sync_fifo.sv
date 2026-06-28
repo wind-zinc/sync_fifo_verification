@@ -1,3 +1,4 @@
+// my original systemverilog testbench without UVM, 2026.05
 `timescale 1ns/1ps
 
 module tb_sync_fifo;
