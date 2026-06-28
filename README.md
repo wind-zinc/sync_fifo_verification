@@ -17,7 +17,7 @@ The verification environment includes:
 - A dedicated runtime-reset test
 
 ## DUT Behavior
-
+```text
 | Scenario                          | Expected behavior                                    |
 | `wr_en && !full`                  | Write is accepted                                    |
 | `rd_en && !empty`                 | Read is accepted                                     |
@@ -27,7 +27,7 @@ The verification environment includes:
 | Full + simultaneous read/write    | Only read is accepted                                |
 | Middle + simultaneous read/write  | Both operations are accepted; occupancy is unchanged |
 | Reset                             | FIFO clears; `empty=1`, `full=0`, `dout=0`           |
-
+```
 ## Verification Architecture
 
 ```text
@@ -63,7 +63,7 @@ FAIL  : 0
 ```
 
 ### Representative coverage (`DATA_WIDTH=8`, `DEPTH=10`)
-
+```text
 | Metric                  | Result  |
 | Functional coverage     | 100.00% |
 | DUT code coverage score | 96.46%  |
@@ -71,7 +71,7 @@ FAIL  : 0
 | Condition coverage      | 100.00% |
 | Toggle coverage         | 98.86%  |
 | Branch coverage         | 92.86%  |
-
+```
 The remaining uncovered code was manually reviewed as unreachable parameter-error logic or reset-related toggle accounting limitations.
 
 ## Project Layout
