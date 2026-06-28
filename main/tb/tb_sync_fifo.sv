@@ -1,4 +1,4 @@
-// my original systemverilog testbench without UVM, 2026.05
+// my original systemverilog testbench without UVM, including random stimulus and 2 assertion.
 `timescale 1ns/1ps
 
 module tb_sync_fifo;
